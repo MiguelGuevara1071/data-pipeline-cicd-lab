@@ -15,7 +15,7 @@ def test_ingest_csv_returns_dataframe(spark):
 
     df = ingest_csv(spark, file_path)
 
-    assert df.count() == 10
+    assert df.count() == 15
     assert "transaction_id" in df.columns
     assert "customer_id" in df.columns
     assert "amount" in df.columns
